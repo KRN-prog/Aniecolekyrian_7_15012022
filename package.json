@@ -1,0 +1,11 @@
+{
+  "name": "p7_aniecole_kyrian",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./src/sass/index.scss:./src/css/styles.css"
+  },
+  "author": "",
+  "license": "ISC"
+}
