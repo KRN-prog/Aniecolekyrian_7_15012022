@@ -30,12 +30,11 @@ export default class Tags{
                 break;
         
             default:
-                for (let i = 0; i < document.querySelectorAll(".tags__container__text").length; i++) {
-                    if (document.querySelectorAll(".tags__container__text")[i].innerHTML == this._value){
+                document.querySelectorAll(".tags__container__text").forEach(spec => {
+                    if (spec.innerHTML == this._value){
                         tagOccurence = 1;
                     }
-
-                }
+                });
 
                 if (tagOccurence == undefined) {
                     createTag(this._value, this._categorie);
@@ -54,28 +53,28 @@ export default class Tags{
     get delete(){
         if (document.querySelector(".supprTag")) {
             let tagGroup = [];
-            for (let i = 0; i < document.querySelectorAll(".supprTag").length; i++) {
-                const suppreTagIcon = document.querySelectorAll(".supprTag")[i];
-                suppreTagIcon.addEventListener("click", function(){
-                    suppreTagIcon.parentNode.remove();
+            document.querySelectorAll(".supprTag").forEach(supprTag => {
+                tagGroup.push(supprTag.previousSibling.innerHTML);
+                supprTag.addEventListener("click",function () {
+                    supprTag.parentNode.remove();
+                    tagGroup = [];
                     switch (document.querySelectorAll(".supprTag").length) {
                         case 0:
                             tagGroup = [];
-                            const noTags = new SearchBar(tagGroup, recipes);
-                            noTags.tagsSearch;
-                            break;
-                    
-                        default:
-                            tagGroup = [];
-                            for (let o = 0; o < document.querySelectorAll(".supprTag").length; o++) {
-                                tagGroup.push(document.querySelectorAll(".supprTag")[o].previousSibling.innerHTML);
-                            }
                             const allTags = new SearchBar(tagGroup, recipes);
                             allTags.tagsSearch;
                             break;
+                    
+                        default:
+                            document.querySelectorAll(".supprTag").forEach(tagToDelete => {
+                                tagGroup.push(tagToDelete.previousSibling.innerHTML);
+                                const allTags = new SearchBar(tagGroup, recipes);
+                                allTags.tagsSearch;
+                            });
+                            break;
                     }
-                });  
-            }
+                });
+            });
         }
     }
 }

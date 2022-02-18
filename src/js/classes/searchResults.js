@@ -35,10 +35,10 @@ export default class SearchResult{
         const searchBox = document.querySelector(`.${this._resultsContainer}`);+
         searchBox.appendChild(resultSearchBox);
 
-        for (let i = 0; i < this._arrayResultsSearchBar.length; i++) {
+        this._arrayResultsSearchBar.forEach(result => {
             const resultSearch = document.createElement("div");
             resultSearch.classList.add("specifieSearch__recommendation");
-            resultSearch.innerHTML = this._arrayResultsSearchBar[i];
+            resultSearch.innerHTML = result;
             resultSearchBox.appendChild(resultSearch);
 
             resultSearch.addEventListener("click", function(){
@@ -63,7 +63,7 @@ export default class SearchResult{
                 creatTag.create;
                 creatTag.delete;
             });
-        }
+        });
     }
 
     get delete() {
