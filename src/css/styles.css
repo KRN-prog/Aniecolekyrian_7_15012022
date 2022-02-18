@@ -1,0 +1,244 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.header {
+  flex-basis: 100%;
+  text-align: center;
+  margin: 25px 0;
+}
+.header__image {
+  width: 25%;
+}
+
+.main {
+  display: flex;
+  flex-wrap: wrap;
+  flex-basis: 100%;
+  justify-content: center;
+}
+
+.section {
+  flex-basis: 80%;
+}
+.section__container {
+  display: flex;
+}
+.section--search {
+  position: relative;
+}
+.section--articles {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 25px;
+}
+
+.label {
+  display: none;
+}
+
+.searchBar {
+  width: 95%;
+  margin: 0;
+  border: none;
+  border-radius: 4px 0 0 4px;
+  background: #e6e6e6;
+  padding: 15px;
+}
+
+.btn {
+  width: 10%;
+  margin: 0;
+  padding: 15px;
+  border: none;
+}
+.btn--search {
+  border-radius: 0 4px 4px 0;
+  background: #e6e6e6;
+  text-align: end;
+}
+
+.resultSearch {
+  z-index: 999;
+  position: absolute;
+  width: 100%;
+  background: #f0f0f0;
+}
+.resultSearch__result {
+  padding: 5px 15px;
+}
+.resultSearch__result:hover, .resultSearch__result:active {
+  background: #e6e6e6;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 15px 0;
+}
+.tags__container {
+  display: flex;
+  align-items: center;
+  margin-right: 5px;
+  padding: 5px 10px;
+  border-radius: 4px;
+  color: #fff;
+}
+.tags__container__text {
+  margin-right: 5px;
+  font-size: 12px;
+  vertical-align: middle;
+}
+.tags__container--ingredients {
+  background: #0066ff;
+}
+.tags__container--appliance {
+  background: #79d279;
+}
+.tags__container--ustensils {
+  background: #ff4d4d;
+}
+
+.supprTag {
+  cursor: pointer;
+}
+
+.searchSpec {
+  display: flex;
+}
+.searchSpec__container {
+  position: relative;
+  flex-basis: 10%;
+  padding: 20px 0;
+  color: #fff;
+  border-radius: 4px;
+  margin-right: 25px;
+}
+.searchSpec__container--heigth {
+  height: 17px;
+}
+.searchSpec__container--blue {
+  background: #0066ff;
+}
+.searchSpec__container--green {
+  background: #79d279;
+}
+.searchSpec__container--red {
+  background: #ff4d4d;
+}
+.searchSpec .boxSearchSpec {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px;
+}
+.searchSpec .boxSearchSpec__input {
+  width: 85%;
+  border: none;
+  background: none;
+  color: #fff;
+}
+.searchSpec .specifieSearch {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-left: 10px;
+  padding-top: 5px;
+}
+.searchSpec .specifieSearch__recommendation {
+  cursor: pointer;
+  flex-basis: 30%;
+}
+
+.resultSearch-ingredients {
+  position: absolute;
+  width: 100%;
+  margin-top: 10px;
+  background-color: #0066ff;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+.resultSearch-appliance {
+  position: absolute;
+  width: 100%;
+  margin-top: 10px;
+  background-color: #79d279;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+.resultSearch-ustensils {
+  position: absolute;
+  width: 100%;
+  margin-top: 10px;
+  background-color: #ff4d4d;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+.resultSearchBox {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 10px 10px 10px;
+}
+
+.article {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  flex-basis: 30%;
+  margin: 25px 0;
+}
+.article__img {
+  width: 100%;
+  height: 175px;
+  object-fit: cover;
+  border-radius: 4px 4px 0 0;
+}
+
+.infoRecipe {
+  height: 120px;
+  padding: 25px 15px 25px 15px;
+  background: #e6e6e6;
+  border-radius: 0 0 4px 4px;
+}
+.infoRecipe__name-duration {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+.infoRecipe__name-duration .duration {
+  font-weight: 600;
+}
+.infoRecipe__name-duration .duration--clock {
+  margin-right: 5px;
+}
+.infoRecipe__ingredients {
+  display: flex;
+  flex-wrap: wrap;
+}
+.infoRecipe__ingredients__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex-basis: 50%;
+  font-size: 10px;
+}
+.infoRecipe__more {
+  height: 80px;
+  overflow: hidden;
+  margin: 0;
+  flex-basis: 50%;
+  font-size: 10px;
+}
+
+.ingredient {
+  font-weight: bold;
+}
+
+/*# sourceMappingURL=styles.css.map */
