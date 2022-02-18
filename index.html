@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les petits plats</title>
+    <link rel="shortcut icon" href="#">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css"/>
+    <link rel="stylesheet" href="./src/css/styles.css">
+    <script src="https://kit.fontawesome.com/39ab5f9b3b.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header class="header">
+        <img src="./src/images/logo.png" alt="Logo, les petits plats" class="header__image">
+    </header>
+    <main class="main">
+        <section class="section section--search">
+            <nav class="section__container">
+                <label for="searchBar" class="label">a</label>
+                <input type="text" name="searchBar" id="searchBar" class="searchBar" placeholder="Rechercher un ingrédient, appareil, ustensiles ou un recette"/>
+                <button class="btn btn--search"><i class="fas fa-search fa-2x"></i></button>
+            </nav>
+            <div class="tags">
+            </div>
+            <div class="searchSpec">
+                <div class="ingredients-searchSpec searchSpec__container searchSpec__container--heigth searchSpec__container--blue">
+                    <div class="boxSearchSpec">
+                        <label for="ingredientSearch" class="label">a</label>
+                        <input class="boxSearchSpec__input spec-input-0" type="text" name="ingredientSearch" id="ingredientSearch" value="Ingrédients" placeholder="Ingrédients"/>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                </div>
+
+                <div class="appliance-searchSpec searchSpec__container searchSpec__container--heigth searchSpec__container--green">
+                    <div class="boxSearchSpec">
+                        <label for="ingredientSearch" class="label">a</label>
+                        <input class="boxSearchSpec__input spec-input-1" type="text" name="appareilSearch" id="appareilSearch" value="Appareil" placeholder="Appareil"/>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                </div>
+
+                <div class="ustensils-searchSpec searchSpec__container searchSpec__container--heigth searchSpec__container--red">
+                    <div class="boxSearchSpec">
+                        <label for="ingredientSearch" class="label">a</label>
+                        <input class="boxSearchSpec__input spec-input-2" type="text" name="ustensilesSearch" id="ustensilesSearch" value="Ustensiles" placeholder="Ustensiles"/>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section section--articles">
+        </section>
+    </main>
+    <script src="./src/js/recipes.js"></script>
+    <script type="module" src="./src/js/classes/createArticles.js"></script>
+    <script type="module" src="./src/js/classes/searchResults.js"></script>
+    <script type="module" src="./src/js/classes/searchBar.js"></script>
+    <script type="module" src="./src/js/classes/tags.js"></script>
+    <script type="module" src="./src/js/classes/articles.js"></script>
+    <script type="module" src="./src/js/index.js"></script>
+</body>
+</html>
