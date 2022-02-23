@@ -43,9 +43,9 @@ export default class Tags{
         }
 
         let tagGroup = [];
-        for (let i = 0; i < document.querySelectorAll(".tags__container").length; i++) {
-            tagGroup.push(document.querySelectorAll(".tags__container__text")[i].innerHTML);
-        }
+        document.querySelectorAll(".tags__container").forEach(tags__container => {
+            tagGroup.push(tags__container.firstChild.innerHTML);
+        });
         const allTags = new SearchBar(tagGroup, recipes);
         allTags.tagsSearch;
     }
