@@ -14,12 +14,13 @@ export default class SearchResult{
 
         const searchResultCreateBox = document.querySelector(this._whereToCreateResultsContainer);
         searchResultCreateBox.parentNode.insertBefore(resultSearchContainer, searchResultCreateBox.nextSibling);
-        for (let i = 0; i < this._arrayResultsSearchBar.length; i++) {
+        this._arrayResultsSearchBar.forEach(arrayResultsSearchBar => {
+            console.log(arrayResultsSearchBar);
             const resultSearch = document.createElement("div");
             resultSearch.classList.add(this._resultsBox);
-            resultSearch.textContent = this._arrayResultsSearchBar[i];
+            resultSearch.textContent = arrayResultsSearchBar;
             resultSearchContainer.appendChild(resultSearch);
-        }
+        });
     }
 
     /* Création bar de recherche spécifique (ingrédient, appareil, ustensils) */
